@@ -26,8 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Editor
-    'tinymce',
-    'django_quill',
+    # 'tinymce',
+    # 'django_quill',
     'django_editorjs',
     'django_editorjs_fields',
     'rest_framework',
