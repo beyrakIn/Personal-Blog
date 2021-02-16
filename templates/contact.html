@@ -140,19 +140,20 @@
                     <div class="col-md-12">
 
                         <div class="row">
-                            <form method="post">
+                            <form method="post" action="message">
+                                {% csrf_token %}
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input type="text" id="name" class="form-control"
-                                               placeholder="Your Name">
+                                               placeholder="Your Name" name="name" required>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input type="email" id="email" class="form-control"
-                                               placeholder="Your Email">
+                                               placeholder="Your Email" name="email" required>
                                     </div>
                                 </div>
 
@@ -160,7 +161,8 @@
                                 <div class="col-sm-12">
                                     <div class="textarea-message form-group">
                                                 <textarea id="message" class="textarea-message form-control"
-                                                          placeholder="Your Message" rows="5"></textarea>
+                                                          placeholder="Your Message" rows="5" name="message"
+                                                          required></textarea>
                                     </div>
                                 </div>
 

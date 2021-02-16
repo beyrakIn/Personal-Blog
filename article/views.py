@@ -31,6 +31,11 @@ def contact(request):
     return render(request, 'contact.html', {"social": social})
 
 
+def message(request):
+    form = request.POST['name']
+    return HttpResponse(form)
+
+
 @requires_csrf_token
 def upload_image_view(request):
     files = request.FILES['image']
