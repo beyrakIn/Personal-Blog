@@ -32,8 +32,10 @@ def contact(request):
 
 
 def message(request):
-    form = request.POST['name']
-    return HttpResponse(form)
+    name = request.POST['name']
+    email = request.POST['email']
+    body = request.POST['body']
+    return HttpResponse(name + email + body)
 
 
 @requires_csrf_token
